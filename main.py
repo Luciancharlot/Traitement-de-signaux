@@ -12,14 +12,14 @@ dans_le_magasin = 0
 sortants = 0
 
 # Position de la ligne de détection
-ligne_de_detection_x_coord = 1200
+ligne_de_detection_x_coord = 1400
 
 # Initialisation du soustracteur de fond
 fgbg = cv2.createBackgroundSubtractorMOG2()
 
 # Seuils pour éviter les microvibrations
 seuil_area = 30000  # Augmentation du seuil de l'aire
-seuil_mouvement = 100 
+seuil_mouvement = 150 
 
 # Identifiant unique pour chaque contour
 next_id = 1
