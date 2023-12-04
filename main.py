@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-# Chemin vers votre fichier vidéo
 video_path = './full.mp4'
 
 # Création d'un objet de capture vidéo
@@ -10,7 +9,7 @@ cap = cv2.VideoCapture(video_path)
 # Initialisation des compteurs
 dans_le_magasin = 0
 sortants = 0
-entrants = 0  # Compteur pour les entrants
+entrants = 0  
 
 # Position de la ligne de détection
 ligne_de_detection_x_coord = 1300
@@ -19,8 +18,8 @@ ligne_de_detection_x_coord = 1300
 fgbg = cv2.createBackgroundSubtractorMOG2()
 
 # Seuils pour éviter les microvibrations
-seuil_area = 35000  # Seuil de l'aire
-seuil_mouvement = 170  # Ajusté pour réduire les fausses détections
+seuil_area = 35000  
+seuil_mouvement = 170  
 
 # Identifiant unique pour chaque contour
 next_id = 1
@@ -100,7 +99,7 @@ while True:
     cv2.imshow('Frame', frame)
     cv2.imshow('Foreground', fgmask)
 
-    key = cv2.waitKey(70) & 0xFF
+    key = cv2.waitKey(1) & 0xFF
     if key == ord('q'):
         break
 
